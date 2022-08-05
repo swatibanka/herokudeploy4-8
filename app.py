@@ -23,7 +23,7 @@ app = Flask(__name__)
 @app.route("/")
 # Generic Python function that returns "Hello world!"
 def index():
-    return "Hello world!"
+    return jsonify({"books": books})
 
 # Annotation that allows the function to be hit at the specific URL. Indicates a GET HTTP method.
 @app.route("/library/v1.0/books", methods=["GET"])
